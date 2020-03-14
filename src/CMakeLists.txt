@@ -216,6 +216,8 @@ macro(gamenetworkingsockets_common GNS_TARGET)
 
 	if(CMAKE_SYSTEM_NAME MATCHES Linux)
 		target_compile_definitions(${GNS_TARGET} PUBLIC POSIX LINUX)
+	elseif(CMAKE_SYSTEM_NAME MATCHES OpenBSD)
+		target_compile_definitions(${GNS_TARGET} PUBLIC POSIX LINUX)
 	elseif(CMAKE_SYSTEM_NAME MATCHES Darwin)
 		target_compile_definitions(${GNS_TARGET} PUBLIC POSIX OSX)
 	elseif(CMAKE_SYSTEM_NAME MATCHES Windows)

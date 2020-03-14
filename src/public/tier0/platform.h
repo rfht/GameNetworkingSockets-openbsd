@@ -55,7 +55,9 @@
 
 #if defined( POSIX )
 
+#	if !defined(__OpenBSD__)
 	#include <alloca.h>
+#	endif
 
 	// handle mapping windows names used in tier0 to posix names in one place
 	#define _snprintf snprintf //validator.cpp

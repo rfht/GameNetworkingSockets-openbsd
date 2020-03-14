@@ -755,7 +755,8 @@ static CRawUDPSocketImpl *OpenRawUDPSocketInternal( CRecvPacketCallback callback
 	}
 
 	// Supply defaults
-	int nAddressFamilies = pnAddressFamilies ? *pnAddressFamilies : k_nAddressFamily_Auto;
+	//int nAddressFamilies = pnAddressFamilies ? *pnAddressFamilies : k_nAddressFamily_Auto;
+	int nAddressFamilies = k_nAddressFamily_IPv4;
 	SteamNetworkingIPAddr addrLocal;
 	if ( pAddrLocal )
 		addrLocal = *pAddrLocal;
